@@ -4,8 +4,8 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const config = require('./config/secret');
 const app = express();
-const root = require('./router/root');
-const users = require('./router/users');
+const root = require('./routes/root');
+const users = require('./routes/users');
 
 const port = process.env.PORT || 5000; 
 app.use(morgan('dev'));
