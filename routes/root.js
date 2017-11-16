@@ -1,4 +1,5 @@
 // import router from 'express';
+const models = require('../models');
 const rootRouter = require('express').Router();
 
 rootRouter.use((req, res, next) => {
