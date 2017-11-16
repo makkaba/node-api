@@ -9,8 +9,20 @@ userRouter.use((req, res, next) => {
 
 //순수 jwt로 회원가입하도록 만들기
 userRouter.post('/', (req, res) => {
+    var body = req.body;
+    if(typeof req.body.email === 'undefined'){
+        res.status(400).json({
+            message: 'missing data'
+        });
+    }
+    
+    
+    // config.jwt.secret
+    //패스워드 평문으로 저장하지 않을 것.
+    //패스워드 응답으로 노출하지 않을 것.
     res.status(200).json({
-        message: config.jwt.secret
+        email: body.email,
+        password: body.password
     });
 });
 userRouter.get('/', (req, res) => {

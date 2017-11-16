@@ -1,12 +1,20 @@
 
 const morgan = require('morgan');
 const express = require('express');
+const bodyParser = require('body-parser')
+const config = require('./config/secret');
 const app = express();
 const root = require('./router/root');
 const users = require('./router/users');
 
 const port = process.env.PORT || 5000; 
 app.use(morgan('dev'));
+// parse JSON and url-encoded query
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
+
+app.set('jwt-secret', config.jwt.secret);
+
 app.use('/', root);
 app.use('/users', users);
 
