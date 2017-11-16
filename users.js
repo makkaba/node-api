@@ -1,15 +1,16 @@
 // import router from 'express';
+const config = require('./config/secret');
 const router = require('express').Router();
 
 router.use((req, res, next) => {
-    console.log('Time:', Date.now());
+    console.log('do this');
     next();
 })
 
 //순수 jwt로 회원가입하도록 만들기
 router.post('/', (req, res) => {
     res.status(200).json({
-        message: 'post!'
+        message: config.jwt.secret
     });
 });
 router.get('/', (req, res) => {

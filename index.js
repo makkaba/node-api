@@ -1,7 +1,12 @@
+
+const morgan = require('morgan');
 const express = require('express');
 const app = express();
 const root = require('./root');
 const users = require('./users');
+
+const port = process.env.PORT || 5000; 
+app.use(morgan('dev'));
 app.use('/', root);
 app.use('/users', users);
 
@@ -17,5 +22,5 @@ app.use('/users', users);
 // });
 
 app.listen(5000, () => {
-    console.log('server is running...');
+    console.log(`server is running on port ${port}`);
 });
