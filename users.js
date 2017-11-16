@@ -6,6 +6,12 @@ router.use((req, res, next) => {
     next();
 })
 
+//순수 jwt로 회원가입하도록 만들기
+router.post('/', (req, res) => {
+    res.status(200).json({
+        message: 'post!'
+    });
+});
 router.get('/', (req, res) => {
     const token = req.query.token;
     
