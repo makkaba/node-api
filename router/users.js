@@ -1,5 +1,5 @@
 // import router from 'express';
-const config = require('./config/secret');
+const config = require('../config/secret');
 const router = require('express').Router();
 
 router.use((req, res, next) => {

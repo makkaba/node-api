@@ -2,8 +2,8 @@
 const morgan = require('morgan');
 const express = require('express');
 const app = express();
-const root = require('./root');
-const users = require('./users');
+const root = require('./router/root');
+const users = require('./router/users');
 
 const port = process.env.PORT || 5000; 
 app.use(morgan('dev'));
