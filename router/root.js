@@ -1,14 +1,14 @@
 // import router from 'express';
-const router = require('express').Router();
+const rootRouter = require('express').Router();
 
-router.use((req, res, next) => {
+rootRouter.use((req, res, next) => {
     console.log('do this');
     next();
 })
 
-router.get('/', (req, res) => {
+rootRouter.get('/', (req, res) => {
     res.status(200).json({message: 'connected'});
 });
 
-// export default router;
-module.exports = router;
+// export default rootRouter;
+module.exports = rootRouter;

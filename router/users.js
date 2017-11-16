@@ -1,19 +1,19 @@
-// import router from 'express';
+// import userRouter from 'express';
 const config = require('../config/secret');
-const router = require('express').Router();
+const userRouter = require('express').Router();
 
-router.use((req, res, next) => {
+userRouter.use((req, res, next) => {
     console.log('do this');
     next();
 })
 
 //순수 jwt로 회원가입하도록 만들기
-router.post('/', (req, res) => {
+userRouter.post('/', (req, res) => {
     res.status(200).json({
         message: config.jwt.secret
     });
 });
-router.get('/', (req, res) => {
+userRouter.get('/', (req, res) => {
     const token = req.query.token;
     
     //토큰으로 파싱해서 uid와 이메일을 가져와서 
@@ -25,5 +25,5 @@ router.get('/', (req, res) => {
     });
 });
 
-// export default router;
-module.exports = router;
+// export default userRouter;
+module.exports = userRouter;
