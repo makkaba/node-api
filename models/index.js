@@ -11,3 +11,5 @@ const sequelize = new Sequelize(
     'dialect': 'mysql' // 사용할 데이터베이스 종류
   }
 );
+
+//TODO: 여기서 모델을 모아서 export 하자
