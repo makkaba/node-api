@@ -32,7 +32,13 @@ var User = sequelize.define('user', {
 	password_confirmation: {
 		type: Sequelize.VIRTUAL
 	}
-};
+}, {
+	classMethods: {},
+    tableName: 'user',
+    freezeTableName: true,
+    underscored: true,
+    timestamps: true
+});
 
 module.exports = User;
 
