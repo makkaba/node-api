@@ -13,4 +13,13 @@ const connection = new Sequelize(
   }
 );
 
+//connection check
+connection.authenticate().then(function(err){
+    if(err){
+        console.log('connection error');
+    }else{
+        console.log('connection success');
+    }
+})
+
 //TODO: 여기서 모델을 모아서 export 하자
