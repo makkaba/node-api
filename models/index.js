@@ -22,4 +22,6 @@ connection.authenticate().then(function(err){
     }
 })
 
+module.exports = connection;
 //TODO: 여기서 모델을 모아서 export 하자
+//구조를 어떻게 나누는지?
