@@ -4,28 +4,23 @@
 
 ## Development Dependencies
 
-패키지 매니저로 yarn을 사용합니다.
+* Global Setting
 
 `npm install -g sequelize-cli nodemon`
 
-* nodemon: 
+* What You Need on Development
 
-* sequelize-cli:
+`yarn add babel-cli babel-preset-es2015 babel-preset-stage-2 mocha babel-register --dev`
 
-`yarn add --dev babel-cli babel-preset-es2015 babel-preset-stage-2`
+참고: [(es6 바벨 설정)](https://github.com/babel/example-node-server)
 
-* babel-cli: Compile files from the command line using babel
-
-* babel-preset-es2015: Babel preset for all es2015 plugins.
-
-* [es6 바벨 설정](https://github.com/babel/example-node-server)
-
-## Run
+## Command
 
 ```shell
-yarn run start
-yarn run build
-yarn run serve
+yarn start
+yarn build
+yarn serve
+yarn test
 ```
 
 ## Test
