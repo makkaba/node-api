@@ -18,4 +18,17 @@
 
 * babel-preset-es2015: Babel preset for all es2015 plugins.
 
+* [es6 바벨 설정](https://github.com/babel/example-node-server)
 
+## Run
+
+```shell
+yarn run start
+yarn run build
+yarn run serve
+```
+
+## Test
+```
+yarn add mocha babel-register --dev
+```
