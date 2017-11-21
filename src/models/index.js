@@ -20,7 +20,13 @@ connection.authenticate().then(function(err){
     }else{
         console.log('connection success');
     }
-})
+});
+
+
+/*
+https://sequelize.readthedocs.io/en/1.7.0/articles/express/
+http://totuworld.github.io/2015/08/07/sequelize/
+*/
 
 module.exports = connection;
 //TODO: 여기서 모델을 모아서 export 하자

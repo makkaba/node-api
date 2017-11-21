@@ -66,4 +66,5 @@ typings/
 
 
 
-config/secret.js
+src/config/secret.js
+dist
