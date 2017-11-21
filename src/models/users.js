@@ -1,6 +1,5 @@
-"use strict";
-
-module.exports = function(sequelize, DataTypes){
+import Sequelize from 'sequelize';
+export default function(sequelize, DataTypes){
 	var User = sequelize.define('user', {
 		name: {
 			type: Sequelize.STRING,

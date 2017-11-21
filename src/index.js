@@ -1,3 +1,4 @@
+import users from './routes/users';
 
 const morgan = require('morgan');
 const express = require('express');
@@ -5,7 +6,8 @@ const bodyParser = require('body-parser')
 const config = require('./config/secret');
 const app = express();
 const root = require('./routes/root');
-const users = require('./routes/users');
+
+// const users = require('./routes/users');
 
 const port = process.env.PORT || 5000; 
 app.use(morgan('dev'));

@@ -1,6 +1,9 @@
 // import userRouter from 'express';
-const config = require('../config/secret');
-const userRouter = require('express').Router();
+
+import { jwt as jwtConfig } from '../config/secret';
+import express from 'express';
+const userRouter = express.Router();
+// const userRouter = require('express').Router();
 
 userRouter.use((req, res, next) => {
     console.log('do this');
@@ -37,5 +40,5 @@ userRouter.get('/', (req, res) => {
     });
 });
 
-// export default userRouter;
-module.exports = userRouter;
+export default userRouter;
+// module.exports = userRouter;
